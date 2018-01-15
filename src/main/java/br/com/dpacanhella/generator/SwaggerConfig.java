@@ -15,11 +15,11 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("br.com.dpacanhella.designpatterns.controller")).paths(PathSelectors.any()).build();
+                .apis(RequestHandlerSelectors.basePackage("br.com.dpacanhella.generator.controller")).paths(PathSelectors.any()).build();
     }
 
     private ApiInfo apiInfo() {
-        ApiInfo apiInfo = new ApiInfo("JAVA 8 - DESIGN PATTERNS", "DESIGN PATTERNS", "1.0.0", "@dpacanhella", "API License",
+        ApiInfo apiInfo = new ApiInfo("JAVA 8 - CRUD GENERATOR", "CRUD GENERATOR", "1.0.0", "@dpacanhella", "API License",
                 "API License URL", "/");
 
         return apiInfo;
