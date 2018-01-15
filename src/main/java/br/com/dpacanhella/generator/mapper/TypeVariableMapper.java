@@ -11,14 +11,21 @@ public class TypeVariableMapper extends BaseMapper<TypeVariable, TypeVariableDTO
 
     @Override
     public TypeVariableDTO toDTO(TypeVariable entity) {
-        // TODO Auto-generated method stub
-        return null;
+        TypeVariableDTO dto = new TypeVariableDTO();
+        dto.setId(entity.getId());
+        dto.setName(entity.getName());
+        dto.setImportName(entity.getImportName());
+
+        return dto;
     }
 
     @Override
     public TypeVariable toEntity(TypeVariableDTO dto) {
-        // TODO Auto-generated method stub
-        return null;
+        TypeVariable entity = new TypeVariable();
+        entity.setName(dto.getName());
+        entity.setImportName(dto.getImportName());
+
+        return entity;
     }
 
 }

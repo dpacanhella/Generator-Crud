@@ -38,7 +38,7 @@ public class TypeVariableServiceImpl implements TypeVariableService {
         entity.setName(dto.getName());
         entity.setImportName(dto.getImportName());
 
-        return entity;
+        return repository.save(entity);
     }
 
     @Override

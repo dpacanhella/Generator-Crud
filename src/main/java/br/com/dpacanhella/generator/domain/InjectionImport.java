@@ -10,19 +10,18 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "type_variables")
+@Table(name = "injection_import")
 @Data
-public class TypeVariable {
-    
+public class InjectionImport {
+
     @Id
-    @Column(name = "type_id")
+    @Column(name = "injection_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(name = "type_name", length = 20, nullable = false)
+    @Column(name = "injection_name", length = 200, nullable = false)
     private String name;
     
-    @Column(name = "type_import_name", length = 200)
+    @Column(name = "injection_import_name", length = 200)
     private String importName;
-
 }
