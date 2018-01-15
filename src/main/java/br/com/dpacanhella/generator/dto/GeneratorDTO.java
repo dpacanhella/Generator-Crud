@@ -10,5 +10,6 @@ public class GeneratorDTO {
     private String packageName;
     private ClassDTO classDTO;
     private List<AttributesDTO> attributesDTO;
+    private List<String> imports;
     
 }
