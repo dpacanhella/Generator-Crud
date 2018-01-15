@@ -11,14 +11,23 @@ public class InjectionImportMapper extends BaseMapper<InjectionImport, Injection
 
     @Override
     public InjectionImportDTO toDTO(InjectionImport entity) {
-        // TODO Auto-generated method stub
-        return null;
+        InjectionImportDTO dto = new InjectionImportDTO();
+
+        dto.setId(entity.getId());
+        dto.setName(entity.getName());
+        dto.setImportName(entity.getImportName());
+
+        return dto;
     }
 
     @Override
     public InjectionImport toEntity(InjectionImportDTO dto) {
-        // TODO Auto-generated method stub
-        return null;
+        InjectionImport entity = new InjectionImport();
+
+        entity.setName(dto.getName());
+        entity.setImportName(dto.getImportName());
+
+        return entity;
     }
 
 }
